@@ -1,0 +1,25 @@
+{
+  "name": "destiny-semanal-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bot de Discord con el resumen semanal de Destiny 2 en español.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "npm run build && node --watch dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test --test-isolation=none dist/time.test.js"
+  },
+  "dependencies": {
+    "@types/node": "^24.10.1",
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {}
+}
